@@ -14,10 +14,10 @@ def fofa(keyword):
     browser.get('https://i.nosec.org/login')
     sleep(3)
     #填充账号
-    browser.find_element_by_xpath(".//*[@id='username']").send_keys('915348696@qq.com')
+    browser.find_element_by_xpath(".//*[@id='username']").send_keys('account')
     sleep(3)
     #填充密码
-    browser.find_element_by_xpath(".//*[@id='password']").send_keys('915348696Lll')
+    browser.find_element_by_xpath(".//*[@id='password']").send_keys('pass')
     sleep(3)
     browser.find_element_by_css_selector('#rememberMe').click()
     sleep(3)
@@ -66,6 +66,7 @@ def fofa(keyword):
             except:
                 pass
             sleep(3)
+            #翻页
             href = browser.find_element_by_css_selector('.next_page').get_attribute('href')
             sleep(1)
             browser.get(href)
